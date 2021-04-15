@@ -167,6 +167,13 @@ footer ul li a:hover {
 /*responsive*/
 
 @media (max-width: 650px) {
+  header .image {
+    padding: 4rem 4rem 1rem 4rem;
+    width: 400px;
+    display: block;
+    margin: auto;
+  }
+
   header h1 {
     display: inline-block;
     background: black;
