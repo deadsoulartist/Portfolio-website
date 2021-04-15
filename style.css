@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+:root {
+  --primary-color: black;
+  --secondary-color: rgb(231, 231, 231);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/*navbar*/
+nav {
+  background-color: black;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+}
+
+label a {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.navbar-content {
+  float: right;
+}
+
+.navbar-content li {
+  display: inline-block;
+}
+
+.navbar-content li a {
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  margin: -5px;
+  padding: 0px 15px 0px 15px;
+  display: block;
+  color: white;
+}
+
+.active {
+  background: white;
+}
+/*hamberger*/
+#check {
+  display: none;
+}
+
+.checkbtn {
+  font-size: 20px;
+  float: right;
+  margin-right: 20px;
+  line-height: 50px;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* header */
+header .image {
+  padding: 4rem 4rem 1rem 4rem;
+  width: 500px;
+  display: block;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+header h1 {
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 0px 10px 0px 10px;
+  margin-top: 10px;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+header p {
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+/* sections */
+span {
+  font-weight: bold;
+}
+
+section {
+  padding: 2rem;
+  text-align: center;
+}
+
+section p {
+  padding: 20px;
+}
+
+.sec-01,
+.sec-03 {
+  background: var(--secondary-color);
+}
+
+/* links */
+.links {
+  border: 1px solid black;
+  color: black;
+  padding: 10px;
+}
+
+/* footer */
+footer {
+  padding: 1.5rem;
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+footer ul {
+  padding: 1rem;
+}
+
+footer ul li {
+  display: inline;
+  padding: 10px;
+}
+
+footer ul li a {
+  font-size: 1.8rem;
+  color: white;
+}
+
+/*hover*/
+
+.checkbtn:hover,
+label:hover {
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.navbar-content li a:hover,
+.navbar-content .active {
+  color: black;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.links:hover {
+  color: white;
+  background-color: black;
+  transition: 0.4s;
+}
+
+footer ul li a:hover {
+  color: rgb(104, 104, 104);
+}
+
+/*responsive*/
+
+@media (max-width: 650px) {
+  header h1 {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 0px 10px 0px 10px;
+    margin-top: 10px;
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .checkbtn {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navbar-content {
+    margin-top: -5px;
+    height: 100vh;
+    width: 100%;
+    background: black;
+    text-align: center;
+    position: fixed; /*important for sliding effect*/
+    left: -100%;
+    transition: all 0.5s;
+  }
+
+  .navbar-content li {
+    display: block; /*for vertical alignment of text*/
+    padding: 5px;
+  }
+
+  #check:checked ~ .navbar-content {
+    left: 0;
+  }
+}
