@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap");
+
 :root {
-  --primary-color: black;
-  --secondary-color: rgb(231, 231, 231);
+  --primary-color: rgb(255, 255, 255);
+  --secondary-color: rgb(0, 0, 0);
+  --effect-color: #ad6fff;
 }
 
 * {
@@ -13,6 +16,10 @@
   list-style: none;
 }
 
+body {
+  color: var(--primary-color);
+  background: var(--secondary-color);
+}
 /*navbar*/
 nav {
   background-color: black;
@@ -40,14 +47,14 @@ label a {
 .navbar-content li a {
   font-family: "Roboto", sans-serif;
   font-weight: bolder;
+  font-size: 1.25rem;
   margin: -5px;
+  display: inline-block;
   padding: 0px 15px 0px 15px;
-  display: block;
   color: white;
 }
 
 .active {
-  background: white;
 }
 /*hamberger*/
 #check {
@@ -74,12 +81,13 @@ header .image {
 
 header {
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 0.5rem;
 }
 header h1 {
+  font-family: "Roboto Slab", serif;
   display: inline-block;
-  background: black;
-  color: white;
+
+  color: var(--primary-color);
   padding: 0px 10px 0px 10px;
   margin-top: 10px;
   font-size: 3.5rem;
@@ -91,9 +99,35 @@ header p {
   text-align: center;
   font-size: 1.2rem;
 }
+
+span {
+  color: var(--effect-color);
+}
+
 /* sections */
+section h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 2.2rem;
+}
+
 span {
   font-weight: bold;
+}
+
+small {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+hr {
+  width: 90%;
+  margin: auto;
+}
+section h1 {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 10px;
+  margin-bottom: 5px;
 }
 
 section {
@@ -102,6 +136,7 @@ section {
 }
 
 section p {
+  font-size: 1.1rem;
   padding: 20px;
 }
 
@@ -112,8 +147,8 @@ section p {
 
 /* links */
 .links {
-  border: 1px solid black;
-  color: black;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
   padding: 10px;
 }
 
@@ -121,8 +156,8 @@ section p {
 footer {
   padding: 1rem;
   text-align: center;
-  background: black;
-  color: white;
+  display: inline;
+  color: var(--primary-color);
 }
 
 footer h2 {
@@ -136,7 +171,7 @@ footer ul li {
 
 footer ul li a {
   font-size: 1.8rem;
-  color: white;
+  color: var(--primary-color);
 }
 
 /*hover*/
@@ -147,16 +182,18 @@ label:hover {
   cursor: pointer;
 }
 
-.navbar-content li a:hover,
-.navbar-content .active {
-  color: black;
-  background-color: white;
+label a:hover {
+  color: var(--effect-color);
+}
+
+.navbar-content li a:hover {
   transition: 0.4s;
+  color: var(--effect-color);
 }
 
 .links:hover {
-  color: white;
-  background-color: black;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
   transition: 0.4s;
 }
 
@@ -174,13 +211,18 @@ footer ul li a:hover {
     margin: auto;
   }
 
+  header {
+    text-align: center;
+    padding-bottom: 0rem;
+  }
+
   header h1 {
+    font-family: "Roboto Slab", serif;
+    color: var(--primary-color);
     display: inline-block;
-    background: black;
-    color: white;
     padding: 0px 10px 0px 10px;
     margin-top: 10px;
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     text-align: center;
   }
   .checkbtn {
