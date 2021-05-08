@@ -119,14 +119,14 @@ section p {
 
 /* footer */
 footer {
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: center;
   background: black;
   color: white;
 }
 
-footer ul {
-  padding: 1rem;
+footer h2 {
+  margin-bottom: 1rem;
 }
 
 footer ul li {
