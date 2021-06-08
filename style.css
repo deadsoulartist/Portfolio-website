@@ -186,6 +186,7 @@ label:hover {
 }
 
 label a:hover {
+  transition: 0.4s;
   color: var(--primary-color);
 }
 
